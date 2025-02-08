@@ -1,4 +1,3 @@
-
 const quizData = [
     { question: "How many planets do we have?", options: ["3", "8", "9", "6"], answer: 1 },
     { question: "What is the capital of Nigeria?", options: ["Berlin", "Madrid", "Abuja", "Lisbon"], answer: 2 },
@@ -41,12 +40,11 @@ function checkAnswer(selectedIndex, button) {
     if (selectedIndex === correctAnswer) {
         score++;
         button.style.background = "#4CAF50";
-        button.style.color = "white";
     } else {
         button.style.background = "#f44336";
-        button.style.color = "white";
+        setTimeout(nextQuestion, 500);
+        return;
     }
-    
     document.getElementById("next-btn").classList.remove("hidden");
     if (currentQuestion === quizData.length - 1) {
         document.getElementById("submit-btn").classList.remove("hidden");
@@ -63,8 +61,6 @@ function nextQuestion() {
 function showResults() {
     document.getElementById("question").textContent = "Quiz Completed!";
     document.getElementById("options").innerHTML = "";
-    document.getElementById("next-btn").classList.add("hidden");
-    document.getElementById("submit-btn").classList.add("hidden");
     document.getElementById("score").textContent = `Your final score: ${score} / ${quizData.length}`;
     document.getElementById("score").classList.remove("hidden");
 }
