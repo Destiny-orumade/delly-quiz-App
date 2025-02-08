@@ -1,0 +1,66 @@
+body {
+    font-family: 'Century Gothic', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.quiz-container {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+#progress {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.option {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 80%;
+    font-size: 20px;
+    cursor: pointer;
+    background: #D3D3D3;
+    color: teal;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.option:hover {
+    background: pink;
+    transform: scale(1.05);
+    color: white;
+}
+.hidden {
+    display: none;
+}
+#next-btn, #submit-btn {
+    padding: 10px 20px;
+    background: teal;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+#next-btn:hover, #submit-btn:hover {
+    background: green;
+    color: white;
+}
